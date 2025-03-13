@@ -63,7 +63,7 @@ function init() {
           PRCP: +d.PRCP,
           SNOW: +d.SNOW,
           SNWD: +d.SNWD,
-          month: months[monthIndex] // Assign correct month name
+          month: months[monthIndex+1] // Assign correct month name
       };
   }).then(data => {
       console.log("Unique Months:", [...new Set(data.map(d => d.month))]); // Debugging
