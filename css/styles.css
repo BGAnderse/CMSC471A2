@@ -1,0 +1,35 @@
+* {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+.container {
+    text-align: center; /* Ensures all text and child elements are centered */
+    max-width: 1000px; /* Set max width for the container */
+    margin: 2rem auto; /* Center the container horizontally and add top/bottom margins */
+}
+
+#boxPlot {
+    display: block; /* Make sure it's a block element for proper centering */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    width: 100%; /* Make the SVG fill the width of its parent container */
+    max-width: 1000px; /* Prevent it from growing beyond 1000px */
+}
+
+svg {
+    display: block; /* Block-level element for centering */
+    margin: 0 auto; /* Center horizontally */
+    width: auto; /* Ensure the SVG takes up 100% width of its parent */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#vis svg {
+    margin: 2rem 0; /* Add margin to the top and bottom */
+    border: 1px solid #ccc; /* Optional: Add border for visibility */
+}
+
+.axis text {
+    font-size: 12px;
+}
+

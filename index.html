@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2: US Weather</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding-top: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        select {
+            margin: 5px;
+        }
+
+        svg {
+            margin-top: 20px;
+        }
+
+        .description {
+            margin-top: 40px;
+            text-align: left;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>United States Weather</h1>
+        <h2>North East - NE England January Temperature Minimum</h2>
+        
+        <label for="region">Region:</label>
+        <select id="region" class="variable"></select>
+        <label for="yVar">Y Variable:</label>
+        <select id="yVar" class="variable"></select>
+        <label for="month">Month:</label>
+        <select id="month" class="variable"></select>
+        <div id="tooltip" style="position: absolute; display: none; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px; border-radius: 3px; pointer-events: none;"></div>
+        
+        <svg id="boxPlot"></svg>
+        
+        <div class="description">
+            <h3>Project Overview</h3>
+            <p>Our chosen dataset contains daily U.S. weather measurements in 2017 provided by the NOAA Daily Global Historical Climatology Network. Our chosen variables are month, state, maximum temperature, minimum temperature, and precipitation.</p>
+            
+            <h3>Implemented Interactions</h3>
+            <ul>
+                <li>Select a region to look at</li>
+                <li>Select if you want to look at maximum temperature, minimum temperature, or precipitation for that region</li>
+                <li>Select the month you want to look at</li>
+            </ul>
+            
+            <h3>Design Choices</h3>
+            <p>We chose our particular visual encoding to show the range of different temperatures and precipitation among different states throughout different months of 2017.</p>
+            
+            <h3>Alternative Considered</h3>
+            <p>Another alternative we considered was making a map and using a date slider to look at monthly minimum temperatures, maximum temperatures, and precipitation.</p>
+            
+            <h3>Team Contributions</h3>
+            <p>All team members worked together to select a dataset, variables, visual encodings, and interaction techniques to use in our application. Ben and Ezra worked on creating the visual encodings and interactions while Alexa worked on the write-up.</p>
+            
+            <h3>Challenges</h3>
+            <p>The aspects that took the most time were creating the transitions between different data and centering the plot on the webpage. The overall development of the application took about 4 hours.</p>
+            
+            <h3>Use of ChatGPT</h3>
+            <p>ChatGPT was used to help create the regions dictionary, the months array, and shorten the setBackground function.</p>
+        </div>
+    </div>
+    
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
